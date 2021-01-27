@@ -1,0 +1,9 @@
+{
+    "image1": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///ZgRAAA/29vZk9NAPD/hv9k9v8A8G/4v9GGiP//aPj234SI/49o+EbdhIgPj2j4Rt2EiA//aPj234SI//Bv+L/Rhoj/8P+G/2T2/wAA/2ZvZk9NAADw///2YEQAAAAA8A8AAAAAAAAAAAAAAA==",
+    "image2": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///ZgRAAA/29vZk9NAPD/hv9k9v8A8G/4v9GGiP//aPj234SI/49o+EbdhIgPj2j4Rt2EiA//aPj234SI//Bv+L/Rhoj/8P+G/2T2/wAA/2ZvZk9NAADw///2YEQAAAAA8A8AAAAAAAAAAAAAAA==",
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
