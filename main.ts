@@ -1,7 +1,51 @@
-scene.onOverlapTile(SpriteKind.Player, assets.tile`tile0`, function (sprite, location) {
-    game.over(false)
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile14`, function (sprite, location) {
+    music.baDing.play()
+    game.showLongText("level 3 complete", DialogLayout.Bottom)
+    mySprite.setImage(img`
+        . . . . e e e e e e e e . . . . 
+        . . . . d e e d e e d e . . . . 
+        . . . . d 1 8 d d 8 1 d . . . . 
+        . . . . d d d d d d d d . . . . 
+        . . . . d d f f f f d d . . . . 
+        . . . . d d d d d d d d . . . . 
+        . . . 6 6 6 6 6 6 6 6 6 6 . . . 
+        . . . 6 6 6 6 6 6 6 6 6 6 . . . 
+        . . . d d 6 6 6 6 6 6 d d . . . 
+        . . . d d 6 6 6 6 6 6 d d . . . 
+        . . . d d 6 6 6 6 6 6 d d . . . 
+        . . . d d 8 8 8 8 8 6 d d . . . 
+        . . . . . 8 8 8 8 8 8 . . . . . 
+        . . . . . 8 8 . . 8 8 . . . . . 
+        . . . . . 8 8 . . 8 8 . . . . . 
+        . . . . . f f . . f f . . . . . 
+        `)
+    tiles.setTilemap(tilemap`level4`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`tile18`)
+    scene.cameraFollowSprite(mySprite)
+    info.startCountdown(20)
 })
-let mySprite = sprites.create(img`
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleBlueCrystal, function (sprite, location) {
+    music.baDing.play()
+    game.showLongText("level 2 complete", DialogLayout.Center)
+    tiles.setTilemap(tilemap`level3`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`tile13`)
+    scene.cameraFollowSprite(mySprite)
+    info.startCountdown(20)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile16`, function (sprite, location) {
+    music.baDing.play()
+    game.over(true, effects.confetti)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile0`, function (sprite, location) {
+    music.baDing.play()
+    game.showLongText("Level one complete", DialogLayout.Center)
+    tiles.setTilemap(tilemap`level2`)
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleRedCrystal)
+    scene.cameraFollowSprite(mySprite)
+    info.startCountdown(20)
+})
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 8 8 f f f . . . . 
     . . . f f f 8 8 8 8 f f f . . . 
